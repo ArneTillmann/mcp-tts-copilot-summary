@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-tts-copilot-summary"
+version = "0.1.0"
+description = "MCP server that reads existing Copilot summaries aloud via Windows SAPI with voice fallback."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "MCP TTS Copilot Summary" }
+]
+dependencies = [
+  "mcp>=1.0.0",
+  "pywin32>=306; platform_system == 'Windows'",
+]
+
+[project.scripts]
+mcp-tts-copilot-summary = "mcp_tts_copilot_summary.main:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+markers = [
+  "optional_windows: optional windows voice validation tests",
+]

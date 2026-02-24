@@ -1,0 +1,12 @@
+{
+  "speak_existing_summary_should_speak": {
+    "summary_text": "This is a test summary for speech output.",
+    "paragraph_count": 5,
+    "new_code_lines": 0
+  },
+  "speak_existing_summary_should_skip": {
+    "summary_text": "Short summary.",
+    "paragraph_count": 2,
+    "new_code_lines": 10
+  }
+}

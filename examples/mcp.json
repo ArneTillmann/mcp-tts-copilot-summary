@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "tts-copilot-summary": {
+      "command": "python",
+      "args": [
+        "-m",
+        "mcp_tts_copilot_summary.main"
+      ],
+      "env": {
+        "MCP_TTS_SUMMARY_ENABLED": "true",
+        "MCP_TTS_SUMMARY_MIN_PARAGRAPHS": "4",
+        "MCP_TTS_SUMMARY_MIN_NEW_CODE_LINES": "100",
+        "MCP_TTS_SUMMARY_ASYNC_SPEECH": "true",
+        "MCP_TTS_SUMMARY_RATE": "0",
+        "MCP_TTS_SUMMARY_VOLUME": "100"
+      }
+    }
+  }
+}
