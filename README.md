@@ -111,8 +111,8 @@ This package is ready for both `pip` and `uv` once published on PyPI.
 
 1. Create a GitHub repository and push this project.
 2. In GitHub repository settings, configure trusted publishing for PyPI.
-3. Create a GitHub release tag like `v0.1.0`.
-4. The workflow at `.github/workflows/publish.yml` builds and publishes automatically.
+3. The workflow at `.github/workflows/publish.yml` builds and attempts publish automatically on every push to `main` (including merges), on release publish, and on manual dispatch.
+4. For an actual new upload to PyPI, bump `version` in `pyproject.toml` before pushing. If the version already exists, publish is safely skipped.
 
 After publication, installation works globally with either tool:
 
